@@ -26,11 +26,9 @@ require_once 'layout/header.php'
 
                 $search = $_GET['search'] ?? '';
                 $nomer = 1;
-                $found = false;
 
                 foreach ($users as $u) {
                     if (stripos($u['nama'], $search) !== false) {
-                        $found = true;
                 ?>
                         <tr>
                             <td><?= $nomer++ ?></td>
@@ -48,13 +46,7 @@ require_once 'layout/header.php'
                 <?php
                     }
                 }
-
-                if (!$found) {
-                    echo "<tr><td colspan='4' class='text-center'>Data tidak ditemukan</td></tr>";
-                }
                 ?>
-
-
             </tbody>
         </table>
     </div>
