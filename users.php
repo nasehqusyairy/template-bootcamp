@@ -6,7 +6,7 @@ require_once 'layout/header.php'
 <div class="card">
     <div class="card-body">
         <form action="" class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search...">
+            <input type="text" class="form-control" placeholder="Search..." name="search">
             <button class="btn-primary btn" type="submit">
                 <i class="bi bi-search"></i>
             </button>
@@ -23,26 +23,37 @@ require_once 'layout/header.php'
             <tbody>
                 <?php
                 require_once 'data.php';
-                $nomer = 1;
-                foreach ($users as $u) {
-                ?>
 
-                    <tr>
-                        <td><?= $nomer++ ?></td>
-                        <td><?= $u['nama'] ?></td>
-                        <td><?= $u['email'] ?></td>
-                        <td>
-                            <a href="edit.php" class="btn btn-sm btn-warning">
-                                <i class="bi bi-pencil"></i>
-                            </a>
-                            <a href="users.php" onclick="confirm('Are you sure?')" class="btn btn-sm btn-danger">
-                                <i class="bi bi-x"></i>
-                            </a>
-                        </td>
-                    </tr>
+                $search = $_GET['search'] ?? '';
+                $nomer = 1;
+                $found = false;
+
+                foreach ($users as $u) {
+                    if (stripos($u['nama'], $search) !== false) {
+                        $found = true;
+                ?>
+                        <tr>
+                            <td><?= $nomer++ ?></td>
+                            <td><?= htmlspecialchars($u['nama']) ?></td>
+                            <td><?= htmlspecialchars($u['email']) ?></td>
+                            <td>
+                                <a href="edit.php" class="btn btn-sm btn-warning">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a href="users.php" onclick="return confirm('Are you sure?')" class="btn btn-sm btn-danger">
+                                    <i class="bi bi-x"></i>
+                                </a>
+                            </td>
+                        </tr>
                 <?php
+                    }
+                }
+
+                if (!$found) {
+                    echo "<tr><td colspan='4' class='text-center'>Data tidak ditemukan</td></tr>";
                 }
                 ?>
+
 
             </tbody>
         </table>
