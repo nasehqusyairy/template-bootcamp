@@ -31,7 +31,7 @@
           id="navbarNavAltMarkup"
         >
           <div class="navbar-nav gap-lg-3">
-            <a class="nav-link" href="prog1.html" style="font-size: large">Home</a>
+            <a class="nav-link" href="index.php" style="font-size: large">Home</a>
             <a class="nav-link" href="users.php" style="font-size: large">User</a>
             <a href="login.html" class="btn btn-danger">logout</a>
           </div>
@@ -39,24 +39,3 @@
       </div>
     </nav>
 <!-- Akhir navbar -->
-    <div class="container py-5">
-      <h1>Home</h1>
-      <hr />
-      <div class="bg-light p-5 border">
-        <h2>Welcome to My App</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-          ducimus tempore itaque quo amet fugit in aliquam maiores quod ratione
-          sequi ipsa exercitationem voluptatibus nesciunt autem fuga nobis nam
-          repellat.
-        </p>
-      </div>
-    </div>
-<!-- akhir main -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
