@@ -70,12 +70,7 @@
             <tbody>
               <?php
               // --- Data user pakai array ---
-              $users = [
-                ["name" => "Jane Smith", "email" => "jane@example.com"],
-                ["name" => "Michael Johnson", "email" => "michael@example.com"],
-                ["name" => "Emily Davis", "email" => "emily@example.com"],
-                ["name" => "David Wilson", "email" => "david@example.com"]
-              ];
+              require_once("data1.php");
 
               // --- Tampilkan data dengan perulangan ---
               $no = 1;
