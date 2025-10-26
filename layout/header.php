@@ -14,16 +14,16 @@
 
     <nav class="bg-dark navbar navbar-dark navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">My App</a>
+            <a class="navbar-brand" href="index.php">My App</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <div class="gap-lg-3 navbar-nav">
-                    <a class="nav-link" href="index.html">Home</a>
-                    <a class="nav-link" href="users.html">Users</a>
-                    <a href="login.html" class="btn btn-danger">Logout</a>
+                    <a class="nav-link" href="index.php">Home</a>
+                    <a class="nav-link" href="users.php">Users</a>
+                    <a href="login.php" class="btn btn-danger">Logout</a>
                 </div>
             </div>
         </div>

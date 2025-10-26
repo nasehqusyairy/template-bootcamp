@@ -32,10 +32,10 @@ require_once 'layout/header.php'
                         <td><?= $u['nama'] ?></td>
                         <td><?= $u['email'] ?></td>
                         <td>
-                            <a href="edit.html" class="btn btn-sm btn-warning">
+                            <a href="edit.php" class="btn btn-sm btn-warning">
                                 <i class="bi bi-pencil"></i>
                             </a>
-                            <a href="users.html" onclick="confirm('Are you sure?')" class="btn btn-sm btn-danger">
+                            <a href="users.php" onclick="confirm('Are you sure?')" class="btn btn-sm btn-danger">
                                 <i class="bi bi-x"></i>
                             </a>
                         </td>
